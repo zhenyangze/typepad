@@ -28,6 +28,7 @@ require.config({
    paths: {
       'ArticleType' : 'ArticleType',
       'Article'     : 'Article',
+      'Wubi'        : 'Wubi',
       'Config'      : 'Config',
       'Engine'      : 'Engine',
       'CETWord'     : 'CETWord',
@@ -47,8 +48,8 @@ function resizeContent(){
 }
 
 
-require(['ArticleType', 'Article', 'Engine', 'Editor'],
-   function (ArticleType, Article, Engine, Editor) {
+require(['ArticleType', 'Article', 'Wubi','Engine', 'Editor'],
+   function (ArticleType, Article, Wubi, Engine, Editor) {
       engine = new Engine();
       editor = new Editor();
 

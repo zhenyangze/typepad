@@ -1,7 +1,8 @@
-define(['Reg','ArticleType','Article', 'Config', 'Record', 'Database', 'KeyCount', 'Utility', 'Editor', 'Result', 'ResultType'], function (
+define(['Reg','ArticleType','Article', 'Wubi', 'Config', 'Record', 'Database', 'KeyCount', 'Utility', 'Editor', 'Result', 'ResultType'], function (
    Reg,
    ArticleType,
    Article,
+   Wubi,
    Config,
    Record,
    Database,
@@ -557,6 +558,11 @@ define(['Reg','ArticleType','Article', 'Config', 'Record', 'Database', 'KeyCount
          let untypedHtml = `<span class='${untypedStringClassName}'>${untypedString}</span>`;
          html = html + untypedHtml
          template.innerHTML = html;
+         if (untypedString.length > 0) {
+           $("#tips").innerText = untypedString[0] + "：" + (Wubi[untypedString[0]] || untypedString[0])
+         } else {
+           $("#tips").innerText = "等待输入..."
+         }
 
          // 滚动对照区到当前所输入的位置
          let offsetTop = $('.' + untypedStringClassName).offsetTop;

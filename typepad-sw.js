@@ -14,6 +14,7 @@ self.addEventListener('install', event => {
             '/js/class/KeyCount.js',
             '/js/class/Config.js',
             '/js/class/Editor.js',
+            '/js/class/Wubi.js',
             '/js/class/Article.js',
             '/js/class/ArticleType.js',
             '/js/class/Reg.js',

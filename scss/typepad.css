@@ -668,6 +668,10 @@ input[type=checkbox]:checked + label.checker {
   border: 1px solid #dddddd;
   margin: 0 5px 5px 0;
 }
+.btn-group-tips {
+    justify-content: flex-end;
+    border: none;
+}
 .btn-group.dash {
   border-style: dashed;
 }
